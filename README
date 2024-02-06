@@ -1,0 +1,23 @@
+PyBattle
+
+CLI Based Battle game written in Python
+
+
+
+Features
+Pick race of character:
+* Human
+* Orc
+* Dwarf
+
+Pick Weapons for character:
+* Sword
+* Spear
+* Axe
+
+***TODO***
+
+* Add Armor
+* Add 1 on 1 battles
+* Basic Character creation
+* Add AI opponent
