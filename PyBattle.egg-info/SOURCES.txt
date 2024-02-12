@@ -1,6 +1,0 @@
-setup.py
-PyBattle.egg-info/PKG-INFO
-PyBattle.egg-info/SOURCES.txt
-PyBattle.egg-info/dependency_links.txt
-PyBattle.egg-info/top_level.txt
-tests/test_character.py
