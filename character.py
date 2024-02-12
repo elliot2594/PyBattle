@@ -13,7 +13,7 @@ class Character:
 		print(f"{self.name} equipped {self.weapon.name}")
 
 	def attack(self):
-		return float(self.weapon.damage) * (random.randint(30, 100) / 100)
+		return float(self.weapon.damage) * (random.randint(40, 100) / 100)
 
 
 class Human(Character):

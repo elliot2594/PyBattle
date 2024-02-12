@@ -1,12 +1,11 @@
 import pytest
 
-from character import Dwarf, Human, Orc
-from weapons import sword
+from character import Human
+from weapons import sword, axe, spear
 
 humanTestName = "Test_Human"
-orcTestName = "Test_Orc"
 
-class TestCharacterClass:
+class TestHumanObject:
 
 	@pytest.fixture
 	def humanObject(self):
@@ -29,9 +28,12 @@ class TestCharacterClass:
 		for i in range(0,100):
 			assert (1 <= int(humanObject.attack()) <= humanObject.weapon.damage), f"Damange should be between 1 and {humanObject.weapon.damage}"
 
+	def testSpearAttack(self, humanObject):
+		assert humanObject.equip(spear) == None
+		for i in range(0,100):
+			assert (1 <= int(humanObject.attack()) <= humanObject.weapon.damage), f"Damange should be between 1 and {humanObject.weapon.damage}"
 
-
-	def testOrcClass(self):
-		orc_obj = Orc(orcTestName)
-		assert orc_obj.health == 100, "Should be 100"
-		assert orc_obj.name == orcTestName, f"Name should be equal to {orcTestName}"
+	def testAxeAttack(self, humanObject):
+		assert humanObject.equip(axe) == None
+		for i in range(0,100):
+			assert (1 <= int(humanObject.attack()) <= humanObject.weapon.damage), f"Damange should be between 1 and {humanObject.weapon.damage}"
