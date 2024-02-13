@@ -1,4 +1,5 @@
 from character import Dwarf, Human, Orc
+from weapons import sword, axe, spear
 numberOfPlayers = 0
 characterList = []
 
@@ -10,7 +11,7 @@ def gameLoop():
 		print("Please enter player {} name".format(i+1))
 		userInputName = input()
 		pickRace(i, userInputName)
-	start()
+	startGame()
 
 
 def validatePlayers():
@@ -34,19 +35,19 @@ def pickRace(playerNumber, characterName):
 			characterList.append(Human(characterName))
 			break
 		elif(userInputRace == "Orc"):
-			characterList["character_{}".format(playerNumber)] = Orc(characterName)
+			characterList.append(Orc(characterName))
 			break
 		elif(userInputRace == "Dwarf"):
-			characterList["character_{}".format(playerNumber)] = Dwarf(characterName)
+			characterList.append(Dwarf(characterName))
 			break
 		else:
 			print("Race must be Human, Orc or Dwarf")
+
 			
-def start():
-	while True:
-		for player in characterList:
-			print(player.health)
-			break
+def startGame():
+	for player in characterList:
+		print(player.name + "\n")
+		print(player.race + "\n")
 
 
 
