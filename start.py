@@ -1,9 +1,14 @@
+import os
 from character import Dwarf, Human, Orc
 from weapons import sword, axe, spear
 numberOfPlayers = 0
 characterList = []
 
+clear = lambda: os.system('clear')
+
+
 def gameLoop():
+	clear()
 	print("Welcome to PyBattle\n")
 	print("Please pick how many players")
 	validatePlayers()
@@ -46,8 +51,9 @@ def pickRace(playerNumber, characterName):
 			
 def startGame():
 	for player in characterList:
-		print(player.name + "\n")
-		print(player.race + "\n")
+		print(player.name)
+		print(player.race)
+		player.health_bar.draw()
 
 
 

@@ -1,4 +1,5 @@
 import random
+from healthBar import HealthBar
 
 class Character:
 	def __init__(self, name):
@@ -24,6 +25,7 @@ class Human(Character):
 		self.defence = 50
 		self.agility = 100
 		self.race = "Human"
+		self.health_bar = HealthBar(self, colour="green")
 
 class Orc(Character):
 	def __init__(self, name:str):
