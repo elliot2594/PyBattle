@@ -35,6 +35,7 @@ class Orc(Character):
 		self.defence = 80
 		self.agility = 40
 		self.race = "Orc"
+		self.health_bar = HealthBar(self, colour="green")
 
 class Dwarf(Character):
 	def __init__(self, name:str):
@@ -44,6 +45,7 @@ class Dwarf(Character):
 		self.defence = 100
 		self.agility = 65
 		self.race = "Dwarf"
+		self.health_bar = HealthBar(self, colour="green")
 
 
 
